@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/story"
+    android:layout_width="80dp"
+    android:layout_height="100dp"
+    app:layout_scrollFlags="scroll">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/storyIcon"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:padding="5dp"
+        android:src="@drawable/ic_baseline_favorite_24"
+        app:civ_border_color="#971773"
+        app:civ_border_width="2dp"
+        app:layout_constraintBottom_toTopOf="@id/storyTitle"
+        app:layout_constraintLeft_toLeftOf="@id/story"
+        app:layout_constraintRight_toRightOf="@id/story"
+        app:layout_constraintTop_toTopOf="@id/story" />
+
+    <TextView
+        android:id="@+id/storyTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:gravity="center_horizontal"
+        android:text="uncleJohn"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/view3"
+        app:layout_constraintLeft_toLeftOf="@id/storyIcon"
+        app:layout_constraintRight_toRightOf="@id/storyIcon"
+        app:layout_constraintTop_toBottomOf="@id/storyIcon" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginTop="1dp"
+        android:background="#CFCECE"
+        app:layout_constraintLeft_toLeftOf="@id/story"
+        app:layout_constraintTop_toBottomOf="@id/storyTitle" />
+    <ImageView
+        android:id="@+id/storyHidden"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

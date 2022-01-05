@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/post"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/postTop"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toTopOf="@id/postPic"
+        app:layout_constraintLeft_toLeftOf="@id/post"
+        app:layout_constraintRight_toRightOf="@id/post"
+        app:layout_constraintTop_toTopOf="@id/post">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userImage"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="4dp"
+            android:foregroundGravity="center_vertical"
+            android:padding="5dp"
+            android:src="@drawable/ic_baseline_favorite_24"
+            app:civ_border_color="#971773"
+            app:civ_border_width="2dp"
+            app:layout_constraintBottom_toBottomOf="@id/postTop"
+            app:layout_constraintLeft_toLeftOf="@id/postTop"
+            app:layout_constraintTop_toTopOf="@id/postTop" />
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:text="uncleJohn"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/postTop"
+
+            app:layout_constraintLeft_toRightOf="@id/userImage"
+            app:layout_constraintTop_toTopOf="@id/postTop" />
+
+        <ImageView
+            android:id="@+id/menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_more_vert_24"
+            app:layout_constraintBottom_toBottomOf="@id/postTop"
+            app:layout_constraintRight_toRightOf="@id/postTop"
+
+            app:layout_constraintTop_toTopOf="@id/postTop" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ImageView
+        android:id="@+id/postPic"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/likeButton"
+        app:layout_constraintLeft_toLeftOf="@id/post"
+        app:layout_constraintRight_toRightOf="@id/post"
+        app:layout_constraintTop_toBottomOf="@id/postTop"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <ImageView
+        android:id="@+id/likeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:src="@drawable/ic_outline_favorite_border_24"
+        app:layout_constraintBottom_toBottomOf="@id/post"
+        app:layout_constraintLeft_toLeftOf="@id/post"
+        app:layout_constraintRight_toLeftOf="@id/commentButton"
+        app:layout_constraintTop_toBottomOf="@id/postPic" />
+
+    <ImageView
+        android:id="@+id/commentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/ic_baseline_chat_bubble_outline_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/likeButton"
+        app:layout_constraintRight_toLeftOf="@id/sendButton"
+        app:layout_constraintTop_toBottomOf="@id/postPic"
+        android:layout_marginEnd="5dp" />
+
+    <ImageView
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/ic_baseline_send_24"
+        app:layout_constraintBottom_toBottomOf="@id/post"
+        app:layout_constraintLeft_toRightOf="@id/commentButton"
+        app:layout_constraintTop_toBottomOf="@id/postPic"
+        android:layout_marginStart="5dp" />
+
+    <ImageView
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:cropToPadding="true"
+        android:src="@drawable/ic_baseline_bookmark_border_24"
+        app:layout_constraintBottom_toBottomOf="@id/post"
+        app:layout_constraintRight_toRightOf="@id/post"
+        app:layout_constraintTop_toBottomOf="@id/postPic" />
+
+<!--    <View-->
+<!--        android:id="@+id/underLine"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_marginTop="1dp"-->
+<!--        android:background="#838080"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/saveButton"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        />-->
+</androidx.constraintlayout.widget.ConstraintLayout>
